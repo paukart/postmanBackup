@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "b5c2b760-3580-4a82-a025-8acd1cad9dfa",
+		"name": "Коллекция для самообучения",
+		"description": "Обучаюсь работе с Postman через бесплатные API-сервисы",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CRUD для jsonplaceholder",
+			"item": [
+				{
+					"name": "Просмотр списка ресурсов",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "04bae558-b4d2-4002-9cd9-8d5d54651e0a",
+								"exec": [
+									"const responseJSON = pm.response.json();\r",
+									"\r",
+									"// check that response status HTTP 200 OK\r",
+									"pm.test(\"Success answer\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "14736640-2035-4229-9f6e-b206509ac189",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://jsonplaceholder.typicode.com/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Создание объекта",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "932c0939-f27b-4f3c-821c-cdeacbb2ab40",
+								"exec": [
+									"const responseJSON = pm.response.json();\r",
+									"\r",
+									"// check that response status HTTP 201 CREATED\r",
+									"pm.test(\"Status code is 201\", () => {\r",
+									"  pm.response.to.have.status(201);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "adc21f43-5073-4c2c-96d2-daebb84c2f4e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"foo\",\r\n    \"body\": \"bar\",\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Обновление ресурса",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "acc9ffe8-f2c6-4aa2-88f0-2af346130d3a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "749032f6-fcd1-4b56-8e23-8ed4cd3159c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"foo\",\r\n    \"body\": \"bar\",\r\n    \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/posts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Исправление ресурса",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "022e6987-a88a-4be2-84a2-943675612479",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "ad950b52-fa3e-4dbc-8de2-a9ab3f0156f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Artem\",\r\n    \"body\": \"Kostenko\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://jsonplaceholder.typicode.com/posts/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление ресурса",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9acd2a81-2482-43db-bd99-da2e7829428a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "1cb35c39-ebad-4f76-8336-05c31473e995",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://jsonplaceholder.typicode.com/posts/1"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "fb6a5a69-237f-4bfc-802b-48b6ad51f586"
+		}
+	]
+}
