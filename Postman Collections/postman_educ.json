@@ -177,6 +177,42 @@
 						"url": "{{url}}/posts/1"
 					},
 					"response": []
+				},
+				{
+					"name": "Авторизация",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "585e08e6-7d3e-4001-9691-14795e5c6214",
+								"exec": [
+									"const myData = pm.response.json()\r",
+									"\r",
+									"pm.environment.set('token', myData.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "20fcecfc-941b-4f87-87e5-41c57ba2e582",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"test\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/auth/login"
+					},
+					"response": []
 				}
 			],
 			"id": "fb6a5a69-237f-4bfc-802b-48b6ad51f586"
