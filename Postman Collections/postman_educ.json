@@ -28,14 +28,14 @@
 							}
 						}
 					],
-					"_postman_id": "14736640-2035-4229-9f6e-b206509ac189",
+					"id": "14736640-2035-4229-9f6e-b206509ac189",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "https://jsonplaceholder.typicode.com/posts"
+						"url": "{{url}}/posts"
 					},
 					"response": []
 				},
@@ -59,7 +59,7 @@
 							}
 						}
 					],
-					"_postman_id": "adc21f43-5073-4c2c-96d2-daebb84c2f4e",
+					"id": "adc21f43-5073-4c2c-96d2-daebb84c2f4e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -75,7 +75,7 @@
 								}
 							}
 						},
-						"url": "https://jsonplaceholder.typicode.com/posts"
+						"url": "{{url}}/posts"
 					},
 					"response": []
 				},
@@ -95,7 +95,7 @@
 							}
 						}
 					],
-					"_postman_id": "749032f6-fcd1-4b56-8e23-8ed4cd3159c7",
+					"id": "749032f6-fcd1-4b56-8e23-8ed4cd3159c7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -111,7 +111,7 @@
 								}
 							}
 						},
-						"url": "https://jsonplaceholder.typicode.com/posts/1"
+						"url": "{{url}}/posts/1"
 					},
 					"response": []
 				},
@@ -131,7 +131,7 @@
 							}
 						}
 					],
-					"_postman_id": "ad950b52-fa3e-4dbc-8de2-a9ab3f0156f6",
+					"id": "ad950b52-fa3e-4dbc-8de2-a9ab3f0156f6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -147,7 +147,7 @@
 								}
 							}
 						},
-						"url": "https://jsonplaceholder.typicode.com/posts/2"
+						"url": "{{url}}/posts/2"
 					},
 					"response": []
 				},
@@ -167,19 +167,19 @@
 							}
 						}
 					],
-					"_postman_id": "1cb35c39-ebad-4f76-8336-05c31473e995",
+					"id": "1cb35c39-ebad-4f76-8336-05c31473e995",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "https://jsonplaceholder.typicode.com/posts/1"
+						"url": "{{url}}/posts/1"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "fb6a5a69-237f-4bfc-802b-48b6ad51f586"
+			"id": "fb6a5a69-237f-4bfc-802b-48b6ad51f586"
 		}
 	]
 }
